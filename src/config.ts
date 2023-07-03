@@ -4,7 +4,7 @@ export const site = {
     description: '',
     keywords: '',
     favicon: '/favicon.ico',
-    url: 'https://dorakika.cn'
+    url: 'hhttps://zongyuanlu.github.io'
 }
 export const footer = {
     beian: {
