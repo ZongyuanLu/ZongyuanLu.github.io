@@ -7,7 +7,7 @@
 </section>
 <script>
 import { project } from "src/config";
-fetch(`https://api.github.com/users/${project.github_name}/repos?per_page=10`).then(res => res.json()).then(res => {
+fetch(`https://api.github.com/users/${project.github_name}/repos?per_page=4`).then(res => res.json()).then(res => {
     injectProjects(res)
 })
 
