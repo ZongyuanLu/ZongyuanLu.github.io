@@ -14,7 +14,7 @@ label,summary{cursor:default;}
 a,button{cursor:pointer;}
 h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
 del,ins,u,s,a,a:hover{text-decoration:none;}
-body,textarea,input,button,select,keygen,legend{font:12px/1.14 arial,\5b8b\4f53;color:#333;outline:0;}
+body,textarea,input,button,select,keygen,legend{font:12px/1.14 arial,\5b8b\4f53;color:#fdf6f6;outline:0;}
 a,a:hover{color:rgba(var(--text-color-meta), 1);}
 
 *{
@@ -23,6 +23,49 @@ a,a:hover{color:rgba(var(--text-color-meta), 1);}
 }
 
 :root{
+    --side-space: 18vw;
+
+    --base-radius: 0.5em;
+    --texture: rgba(12, 86, 234, 0.2);
+    /* --texture: rgba(79, 1, 246, 0); */
+
+    /* --text-color-meta: 81, 87, 90; */
+    --text-color-meta: 0, 0, 0;
+
+    /* --text-color: rgba(var(--text-color-meta), 1); */
+    --text-color: rgba(0,0,0);
+
+
+    /* --border-color: rgba(255,255,255,0.2); */
+    --border-color: rgba(0,0,0,0.2);
+    --bg: rgba(255, 255, 255, 0.9);
+    --card-bg-meta: rgba(255,255,255);
+    --card-bg: rgba(255,255,255, 0.6);
+    --card-hover-bg: rgba(255,255,255, 0.7);
+    --card-active-bg: rgba(255,255,255, 0.9);
+}
+
+/* :root{
+    --text-color-meta: 126, 133, 151;
+
+    --border-color: rgba(115,115,115,0.2);
+    --border-color: rgba(0, 0, 0, 0.2);
+
+    --texture: rgba(99,99,99,0.02);
+    
+    --bg: rgb(14, 19, 23, 0.85);
+    --card-bg-meta: 8, 12, 15;
+    --card-bg: rgba(var(--card-bg-meta), 0.4);
+    --card-hover-bg: rgba(var(--card-bg-meta), 0.7);
+    --card-active-bg: rgba(var(--card-bg-meta), 0.9);
+} */
+@media (max-width: 900px) {
+    :root{
+        --side-space: 5vw
+    }
+}
+
+html.light{
     --side-space: 18vw;
 
     --base-radius: 0.5em;
@@ -38,12 +81,8 @@ a,a:hover{color:rgba(var(--text-color-meta), 1);}
     --card-hover-bg: rgba(255,255,255, 0.7);
     --card-active-bg: rgba(255,255,255, 0.9);
 }
-@media (max-width: 900px) {
-    :root{
-        --side-space: 5vw
-    }
-}
-html.dark{
+
+/* html.dark{
     --text-color-meta: 126, 133, 151;
 
     --border-color: rgba(115,115,115,0.2);
@@ -56,29 +95,31 @@ html.dark{
     --card-bg: rgba(var(--card-bg-meta), 0.4);
     --card-hover-bg: rgba(var(--card-bg-meta), 0.7);
     --card-active-bg: rgba(var(--card-bg-meta), 0.9);
-}
+} */
 
 html::-webkit-scrollbar{
     width: 0;
     height: 0;
 }
 html{
-    background-image: url('/images/bg.webp');
+    background-image: url('/images/bg.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 body{
     min-height: 100vh;
-    background-color: var(--bg);
+    background-color: rgba(94, 128, 239, 0.8);
     padding: 0 var(--side-space);
     font-size: 16px;
-    color: rgba(var(--text-color-meta), 1);
+    /* color: 81, 87, 90; */
+    color: rgb(241, 248, 251)
 }
 
 
 h1,h2,h3,h4,h5,h6{
-    color: rgba(var(--text-color-meta), 1);
+    color: 126, 133, 151;
+    /* color: 255,255,255; */
 }
 
 h2.title{
